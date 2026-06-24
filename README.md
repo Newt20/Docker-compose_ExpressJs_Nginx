@@ -13,6 +13,7 @@
 ---
 
 ## 📖 Overview
+
 This project is a Node.js Express application containerized with Docker and deployed using Docker Compose. It uses Nginx as a reverse proxy to handle incoming requests on port 8080 and forwards them to the Express backend running internally on port 5000. The application image is hosted on Docker Hub and deployed to an AWS EC2 Ubuntu instance, demonstrating a production-like containerized deployment setup.
 ---
 
@@ -99,7 +100,7 @@ http {
 ![WebUI](Image/WebUI.png)
 
 ### 2. Dockerfile
-![nodejs_Dockerfile](Image/nodejs_Dockerfile.png)
+![nodejs_dockerfile](Image/nodejs_dockerfile.png)
 
 ### 3. Nginx
 ![nginx](Image/nginx.png)
