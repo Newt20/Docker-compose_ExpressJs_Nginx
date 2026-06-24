@@ -1,0 +1,19 @@
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: nginx_server
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    restart: unless-stopped
+
+  express-app:
+    # build: . ## already built
+    image: fatinw4/express-app:latest
+    container_name: express_app
+    depends_on:
+      - nginx          # Ensures Express starts AFTER Nginx
+    expose:
+      - "5000"
+    restart: unless-stopped
